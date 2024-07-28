@@ -1,0 +1,100 @@
+/* Container for the dropdown */
+.dropdown {
+  position: relative; /* Position relative to parent for positioning child elements */
+  display: inline-block; /* Display inline-block for proper width */
+  width: 350px; /* Set width of the dropdown */
+}
+
+/* Button to toggle the dropdown menu */
+.dropdown-toggle {
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 12px 20px; /* Padding inside the button */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Text color */
+  display: flex; /* Flex display for alignment */
+  justify-content: center; /* Center items horizontally */
+  width: 300px; /* Set width of the button */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border */
+}
+
+/* Hover effect for the dropdown toggle button */
+.dropdown-toggle:hover {
+  background-color: transparent; /* Keep background transparent */
+  color: blue; /* Change text color to blue on hover */
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+  position: absolute; /* Absolute position to parent */
+  top: 100%; /* Position below the toggle button */
+  left: 0; /* Align to the left */
+  background-color: white; /* Background color of the dropdown */
+  border: 1px solid #ccc; /* Border style */
+  border-top: none; /* Remove top border */
+  border-radius: 0 0 4px 4px; /* Rounded bottom corners */
+  padding: 10px; /* Padding inside the menu */
+  display: none; /* Hidden by default */
+  min-width: 200px; /* Minimum width for the dropdown menu */
+}
+
+/* Display dropdown menu when active */
+.dropdown-menu.active {
+  display: block; /* Show dropdown when active */
+}
+
+/* Container for each option in the dropdown */
+.option {
+  margin-bottom: 10px; /* Space between options */
+  display: flex; /* Flex display for alignment */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Center items vertically */
+}
+
+/* Label for each option (e.g., "Adults", "Children") */
+.option-label {
+  margin-right: 16px; /* Space between label and buttons */
+}
+
+/* Count display for each option (e.g., number of adults) */
+.option-count {
+  margin: 0 12px; /* Space around the count text */
+}
+
+/* Container for travel class buttons */
+.travel-classes {
+  display: flex; /* Flex display for alignment */
+  flex-wrap: wrap; /* Wrap items to the next line */
+}
+
+/* Styles for travel class buttons */
+.travel-classes button {
+  margin-right: 8px; /* Space between buttons */
+  margin-bottom: 8px; /* Space between rows */
+  padding: 12px 16px; /* Padding inside the buttons */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 20px; /* Rounded corners */
+  background-color: #f9f9f9; /* Button background color */
+  color: #333; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition effects */
+}
+
+/* Remove right margin for the last button */
+.travel-classes button:last-child {
+  margin-right: 0; /* Remove right margin */
+}
+
+/* Hover effect for travel class buttons */
+.travel-classes button:hover {
+  background-color: #e9e9e9; /* Change background color on hover */
+}
+
+/* Styles for selected travel class button */
+.travel-classes button.selected {
+  background-color: lightblue; /* Background color for selected button */
+  color: black; /* Text color for selected button */
+  border-color: #007bff; /* Border color for selected button */
+}

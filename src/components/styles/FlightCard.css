@@ -1,0 +1,33 @@
+.flight-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.flight-details {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.airline-info,
+.flight-duration,
+.flight-time {
+  margin-right: 20px;
+}
+
+.flight-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.flight-price button {
+  margin-top: 10px;
+}

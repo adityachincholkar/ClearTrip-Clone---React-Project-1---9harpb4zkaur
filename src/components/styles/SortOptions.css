@@ -1,0 +1,7 @@
+.sort-options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 1px solid #ddd; /* Optional: Add a border to separate from the above section */
+}

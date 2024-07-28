@@ -1,0 +1,21 @@
+.NavLink {
+  width: 180px; /* Increase the width as desired */
+  /* background-color: rgb(255, 255, 255); */
+  display: inline-block; /* Ensures the width is respected */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Ubuntu, Arial, sans-serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+.active {
+  background-color: #d6e8fc;
+  color: #36c;
+  border-radius: 6px;
+}
+
+.NavLink:hover {
+  color: #36c;
+}

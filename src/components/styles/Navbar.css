@@ -1,0 +1,63 @@
+.pb-4 {
+  padding-bottom: 16px;
+}
+.pt-4 {
+  padding-top: 16px;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex-between {
+  justify-content: space-between;
+  margin-left: 9%; /* Left margin for the leftmost element */
+  margin-right: 10%; /* Right margin for the rightmost element */
+}
+
+.flex {
+  display: flex;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: caption;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Ubuntu, Arial, sans-serif;
+}
+user agent stylesheet div {
+  display: block;
+  unicode-bidi: isolate;
+}
+style attribute {
+  --arrow-offer-value: 40.5px;
+  --arrow-value: 29.5px;
+}
+:root {
+  --arrow-value: 5px;
+  --arrow-offer-value: 5px;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: sans-serif;
+  }
+}
+html {
+  font-family: sans-serif;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+.flex-inline:after,
+.flex-inline:before,
+.flex:after,
+.flex:before {
+  display: none;
+}
+.flex-inline:after,
+.flex-inline:before,
+.flex:after,
+.flex:before {
+  display: none;
+}

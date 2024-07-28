@@ -1,0 +1,76 @@
+.price-range .accordion-item {
+  background-color: white;
+  color: black;
+}
+
+.price-range .accordion-header {
+  color: black;
+}
+
+.price-range .accordion-body {
+  background-color: white;
+  color: black;
+}
+
+.custom-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black var(--value, 100%),
+    grey var(--value, 100%),
+    grey 100%
+  );
+  outline: none;
+}
+
+.custom-slider:hover {
+  opacity: 1;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.custom-slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.price-label {
+  color: black;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: lightgrey;
+  margin-top: 10px;
+}
+
+.min-price,
+.max-price {
+  color: lightgrey;
+}
