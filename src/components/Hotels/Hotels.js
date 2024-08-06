@@ -22,12 +22,19 @@ function Hotels() {
   return (
     <Container>
       <Stack direction="row" justifyContent={"space-between"}>
-        <Box flex={3.5} marginTop={1} marginRight={3}>
-          <InformationCard />
-          <Box sx={{ display: { xs: { width: "680" }, sm: "block", m: 2 } }}>
+        <Box
+          flex={3.5}
+          marginTop={1}
+          marginRight={{ xs: 0, sm: 3 }}
+          // sx={{ display: { xs: "none", sm: "block" } }}
+        >
+          <Box sx={{ display: { xs: "block", sm: "block" } }}>
+            <InformationCard />
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <img src="https://www.cleartrip.com/offermgmt/hotelsCommonImages/cfnr/clearchoice-home-banner.png" />
           </Box>
-          <Box sx={{ display: { xs: "block", sm: "none" } }}>
+          <Box sx={{ display: { xs: "none", sm: "none" } }}>
             <OffersCard length="2" />
           </Box>
         </Box>
@@ -48,13 +55,13 @@ function Hotels() {
       {/* <Box>
         <FlightsOffersCard />
       </Box> */}
-      <Box sx={{ my: 5 }}>
+      <Box sx={{ my: 5, display: { xs: "none", sm: "block" } }}>
         <SingleImageOffer />
       </Box>
-      <Box>
+      <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <Destinations />
       </Box>
-      <Box>
+      <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <Footer />
       </Box>
     </Container>

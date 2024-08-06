@@ -335,10 +335,17 @@ import FlightPriceCard from "./FlightPriceCard";
 import MobileEmailForm from "./MobileEmailForm";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import LuggageIcon from "@mui/icons-material/Luggage";
+import FlightIcon from "@mui/icons-material/Flight";
+import HotelIcon from "@mui/icons-material/Hotel";
 
 const steps = ["Review your Itinerary", "Add contact details"];
 
 export default function Flightbookingtab() {
+  const [value, setValue] = useState(0);
+  // const navigate = useNavigate(); // Initialize the useNavigate hook
   const [activeStep, setActiveStep] = useState(0);
   const [skipped, setSkipped] = useState(new Set());
   const [flightData, setFlightData] = useState([]);
@@ -347,9 +354,28 @@ export default function Flightbookingtab() {
   const [searchParams] = useSearchParams();
   const date = searchParams.get("date");
   const flightDataa = JSON.parse(localStorage.getItem("flightData"));
+
   const token1 =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODEwNThlZjZkYjU4YzkwZDkzNjllMSIsImlhdCI6MTcyMTIyMjY5OCwiZXhwIjoxNzUyNzU4Njk4fQ.KECqmnUDQmVlKvvwGjAnYw0_bSCf7ydXD9lxIZzEza8";
 
+  const handleNavigationChange = (event, newValue) => {
+    setValue(newValue);
+
+    // Define your navigation paths based on the selected value
+    switch (newValue) {
+      case 0:
+        navigate("/"); // Navigate to Flights
+        break;
+      case 1:
+        navigate("/hotels"); // Navigate to Hotels
+        break;
+      case 2:
+        navigate("/mytrips"); // Navigate to My Trips
+        break;
+      default:
+        break;
+    }
+  };
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("flightData")) || [];
     if (data.length > 0) {
@@ -496,8 +522,45 @@ export default function Flightbookingtab() {
             </React.Fragment>
           )}
         </Box>
-        <Box flex={1}>
+        <Box flex={1} sx={{ mb: 10 }}>
           <FlightPriceCard />
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            position: "fixed",
+
+            bottom: 0,
+            left: 0,
+            zIndex: 1000,
+            boxShadow: 3,
+            display: { xs: "block", sm: "none" },
+          }}
+        >
+          <BottomNavigation
+            showLabels
+            value={value}
+            onChange={handleNavigationChange}
+          >
+            <BottomNavigationAction
+              label="Flights"
+              icon={
+                <FlightIcon sx={{ fontSize: 20, ml: 1, mr: 1.2, my: 0.8 }} />
+              }
+            />
+            <BottomNavigationAction
+              label="Hotels"
+              icon={
+                <HotelIcon sx={{ fontSize: 20, ml: 1, mr: 1.5, my: 0.8 }} />
+              }
+            />
+            <BottomNavigationAction
+              label="My Trips"
+              icon={
+                <LuggageIcon sx={{ fontSize: 20, ml: 1, mr: 1.5, my: 0.8 }} />
+              }
+            />
+          </BottomNavigation>
         </Box>
       </Stack>
     </div>

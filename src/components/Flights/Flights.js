@@ -15,6 +15,7 @@ import FlightsOffersCard from "./FlightsOffersCard";
 import Destinations from "./Destinations";
 import SingleImageOffer from "./SingleImageOffer";
 import Footer from "./Footer";
+import MobileFlightIncformationCard from "./FlightInformationCard/MobileFlightIncformationCard";
 
 const StyledNavLink = styled(NavLink)`
   color: initial;
@@ -38,6 +39,9 @@ function Flights() {
         >
           <FlightIncformationCard />
         </Box>
+        <Box sx={{ display: { xs: "block", sm: "none" } }}>
+          <MobileFlightIncformationCard />
+        </Box>
         <Box flex={1.5} sx={{ display: { xs: "none", sm: "block" } }}>
           <ThirdBlockOffers />
           <Box sx={{ display: "flex", gap: "200px", mt: 3, mb: 3 }}>
@@ -50,7 +54,7 @@ function Flights() {
         </Box>
       </Stack>
 
-      <Box sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box sx={{ display: { xs: "block", sm: "block" } }}>
         <FlightsOffersCard />
       </Box>
       <Box sx={{ my: 5, display: { xs: "none", sm: "block" } }}>
