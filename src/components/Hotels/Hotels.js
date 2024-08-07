@@ -28,13 +28,13 @@ function Hotels() {
           marginRight={{ xs: 0, sm: 3 }}
           // sx={{ display: { xs: "none", sm: "block" } }}
         >
-          <Box sx={{ display: { xs: "block", sm: "block" } }}>
+          <Box>
             <InformationCard />
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "block", sm: "block" } }}>
             <img src="https://www.cleartrip.com/offermgmt/hotelsCommonImages/cfnr/clearchoice-home-banner.png" />
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "none" } }}>
+          <Box sx={{ display: { xs: "block", sm: "none" } }}>
             <OffersCard length="2" />
           </Box>
         </Box>

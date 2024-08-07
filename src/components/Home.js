@@ -392,6 +392,7 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import Footer from "./Footer";
 
 function Home() {
   const [value, setValue] = React.useState(0);
@@ -473,7 +474,9 @@ function Home() {
           <Outlet />
         </Box>
 
-        <Box
+        {/* <Footer /> */}
+
+        {/* <Box
           sx={{
             width: "100%",
             position: "fixed",
@@ -508,7 +511,7 @@ function Home() {
               }
             />
           </BottomNavigation>
-        </Box>
+        </Box> */}
       </Stack>
     </Container>
   );

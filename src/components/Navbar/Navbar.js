@@ -117,7 +117,7 @@ function Navbar() {
             </a>
           </div>
         </div>
-        <Box>{hotelLocation && <InformationCard />}</Box>
+        {/* <Box>{hotelLocation && <InformationCard />}</Box> */}
         <div class="flex flex-middle px-1">
           <div class="d-flex c-pointer">
             {/* <NavLink
