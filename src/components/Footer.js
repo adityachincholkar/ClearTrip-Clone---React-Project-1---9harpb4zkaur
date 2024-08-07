@@ -88,7 +88,7 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-3 mt-auto">
+    <footer className="bg-dark text-white py-3 mt-auto mb-10">
       <Container>
         <Row>
           <Col className="text-center">
